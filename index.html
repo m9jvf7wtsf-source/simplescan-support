@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>シンプルスキャン — サポート</title>
+<meta name="description" content="シンプルスキャンのサポートページ。よくある質問とお問い合わせ先。">
+<style>
+  :root {
+    --bg: #f5f6f4;
+    --ink: #17191b;
+    --ink-soft: #4a4f54;
+    --accent: #2c5c86;
+    --rule: #d8dbde;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header.hero {
+    padding: 96px 0 64px;
+    position: relative;
+  }
+
+  .bracket-frame {
+    position: relative;
+    display: inline-block;
+    padding: 28px 34px;
+    margin-bottom: 28px;
+  }
+
+  .bracket-frame::before,
+  .bracket-frame::after,
+  .bracket-frame span::before,
+  .bracket-frame span::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border: 2.5px solid var(--accent);
+  }
+
+  .bracket-frame::before { top: 0; left: 0; border-right: none; border-bottom: none; }
+  .bracket-frame::after { top: 0; right: 0; border-left: none; border-bottom: none; }
+  .bracket-frame span::before { bottom: 0; left: 0; border-right: none; border-top: none; }
+  .bracket-frame span::after { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+  .bracket-frame p {
+    font-family: ui-serif, "Hiragino Mincho ProN", serif;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  h1 {
+    font-family: ui-serif, "Hiragino Mincho ProN", serif;
+    font-size: clamp(32px, 6vw, 44px);
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 16px;
+  }
+
+  .lede {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 34em;
+    margin: 0;
+  }
+
+  section {
+    padding: 40px 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  section h2 {
+    font-family: ui-serif, "Hiragino Mincho ProN", serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 24px;
+  }
+
+  .faq-item {
+    margin-bottom: 28px;
+  }
+  .faq-item:last-child { margin-bottom: 0; }
+
+  .faq-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  .faq-item p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+  }
+
+  .button:hover { opacity: 0.92; }
+
+  footer {
+    padding: 40px 0 80px;
+    border-top: 1px solid var(--rule);
+  }
+
+  footer p {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .bracket-frame { animation: settle 0.5s ease-out; }
+  }
+
+  @keyframes settle {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="bracket-frame">
+      <span><p>シンプルスキャン</p></span>
+    </div>
+    <h1>サポート</h1>
+    <p class="lede">
+      書類をサッと撮影してPDF化する、シンプルスキャンのサポートページです。
+      よくある質問と、解決しない場合のお問い合わせ先を掲載しています。
+    </p>
+  </header>
+
+  <section aria-labelledby="faq-heading">
+    <h2 id="faq-heading">よくある質問</h2>
+
+    <div class="faq-item">
+      <h3>カメラへのアクセス許可を求められるのはなぜですか？</h3>
+      <p>書類を撮影してスキャンするために使用します。撮影した写真がアプリの外部に送信されることはありません。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>「写真」へのアクセス許可を求められるのはなぜですか？</h3>
+      <p>作成したスキャン画像を、ご自身の写真アプリに保存したいときにのみ使用します。既存の写真ライブラリを読み取ることはありません（追加のみの権限です）。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>スキャンしたデータはどこに保存されますか？</h3>
+      <p>すべてお使いの端末内に保存されます。外部のサーバーへの送信や、開発者による収集は一切行っていません。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>四隅がうまく検出されないときは？</h3>
+      <p>四隅の丸いハンドルを指でドラッグすると、拡大鏡が表示され細かい位置合わせができます。書類と背景の境目がはっきりする場所で撮影すると、自動検出の精度も上がります。</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>データを削除したい場合は？</h3>
+      <p>アプリ内で該当のスキャンを削除するか、アプリ自体をアンインストールしていただくと、端末に保存されたデータもあわせて削除されます。</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact-heading">
+    <h2 id="contact-heading">お問い合わせ</h2>
+    <p class="lede">上記で解決しない不具合やご要望があれば、下記からご連絡ください。</p>
+    <a class="button" href="mailto:Kunzite510@protonmail.com">メールで問い合わせる</a>
+  </section>
+
+  <footer>
+    <p>シンプルスキャン</p>
+    <p>&copy; 2026 Yuta Goto</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
